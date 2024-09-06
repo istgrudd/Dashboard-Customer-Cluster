@@ -138,7 +138,7 @@ def calculate_clustering_metrics(features, cluster_labels):
         st.write(f"**Calinski-Harabasz Index**: {calinski_harabasz:.2f} (higher values indicate better clustering)")
 
 def main():
-    st.title("Enhanced Customer Clustering Dashboard")
+    st.title("Customer Clustering Dashboard")
     st.write("Analyze customer data using different clustering algorithms and visualize the results interactively.")
 
     # Load data
