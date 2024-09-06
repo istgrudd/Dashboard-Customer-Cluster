@@ -41,13 +41,16 @@ def apply_dimensionality_reduction(data, method="PCA", n_components=2):
     return data
 
 def load_data():
-    try:
-        df = pd.read_csv('D:\Visual Studio\Dataset Tugas MBC\Week 5\cluster\dataset\data_cluster.csv')  # Replace with your actual dataset path
-        st.success("Dataset loaded successfully!")
-    except FileNotFoundError:
-        st.error("Dataset not found. Please check the file path.")
-        return None
-    return df
+    st.sidebar.subheader("1. Upload Your Dataset")
+    uploaded_file = st.sidebar.file_uploader("Upload a CSV file", type="csv")
+    if uploaded_file is not None:
+        df = pd.read_csv(uploaded_file)
+        return df
+    else:
+        st.sidebar.subheader("2. Use Example Dataset")
+        # Example data for demonstration purposes
+        df = sns.load_dataset('iris')  # Replace with your example dataset
+        return df
 
 def visualize_clusters(data, labels):
     # Compact Interactive Cluster Distribution with Plotly
