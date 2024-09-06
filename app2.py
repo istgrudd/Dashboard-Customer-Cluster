@@ -25,7 +25,7 @@ DIMENSION_REDUCTION_ALGOS = ["PCA", "t-SNE"]
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="Enhanced Customer Clustering Dashboard",
+    page_title="Customer Clustering Dashboard",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded",
